@@ -42,7 +42,7 @@ function App() {
     }
   }
   function handleRemoveFromCart(productId) {
-    setCart( cart.filter((item) => item.id !== productId));
+    setCart( cart.filter((item) =>item.id !== productId));
     
   }
   return (
