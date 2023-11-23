@@ -55,13 +55,11 @@ function App() {
               <Route path="/shirts" element={<Shirts isproduct={isproduct} onAddToCart={handleAddToCart} />} />
               <Route path="/shoes" element={<Shoes isproduct={isproduct} onAddToCart={handleAddToCart} />} />
               <Route path="/trousers" element={<Trousers isproduct={isproduct} onAddToCart={handleAddToCart} />} />
-              <Route path="/cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} />} />
-              
+              <Route path="/cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} />} />              
             </>
           ) : (
             <>
-              <Route path="/" element={<Navigate to="/" />} />
-              <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
+             <Route path="/" element={<LoginForm onLogin={handleLogin}/>} />
             </>
           )}
         </Routes>
