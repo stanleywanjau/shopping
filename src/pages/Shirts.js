@@ -16,7 +16,11 @@ function Shirts({isproduct,onAddToCart}) {
           <p><span>Price:</span> {shirt.price}</p>
           <p><span>Size:</span> {shirt.size}</p>
           <p><span>Stock:</span> {shirt.stock}</p>
-          <Link to="/cart"><button className='add-to-cart'>Add to cart</button></Link>
+          <Link to="/cart" >
+              <button className='add-to-cart' onClick={() => onAddToCart(shirt)}>
+                Add to cart
+              </button>
+            </Link>
           </div>
           
        

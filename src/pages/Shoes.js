@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Shoes({ isproduct }) {
+function Shoes({ isproduct, onAddToCart }) {
   return (
     <div className="card-container">
     {isproduct?.shoes?.map((product) => (
@@ -13,7 +13,11 @@ function Shoes({ isproduct }) {
           <p><span>Price:</span> {product.price}</p>
           <p><span>Size:</span> {product.size}</p>
           <p><span>Stock:</span> {product.stock}</p>
-          <Link to="/cart"><button className='add-to-cart'>Add to cart</button></Link>
+          <Link to="/cart" >
+              <button className='add-to-cart' onClick={() => onAddToCart(product)}>
+                Add to cart
+              </button>
+            </Link>
         </div>
       </div>
     ))}
